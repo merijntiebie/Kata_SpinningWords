@@ -1,5 +1,5 @@
-function templateFunction(x) {
-    return x / 2
+function splitMyString(string) {
+    return string.split(" ")
 }
 
-module.exports = templateFunction
+module.exports = splitMyString
