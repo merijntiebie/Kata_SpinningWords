@@ -1,6 +1,6 @@
 const {
     splitMyString, 
-    checkIfWordIsLongerThanFiveCharacters
+    checkIfWordIsFiveOrMoreCharacters 
 } = require('../src/template');
 
 describe('This is a test suite that tests the spinning words function. All words that contain 5 or more letters will be reversed', () => {
@@ -14,8 +14,18 @@ describe('This is a test suite that tests the spinning words function. All words
     });
     describe('Check if the word is 5 or more characters long', () => {
         it('"Hey" -> false', () => {
-            expect(checkIfWordIsLongerThanFiveCharacters("Hey")).toEqual(false);
+            expect(checkIfWordIsFiveOrMoreCharacters("Hey")).toEqual(false);
         });
+        it('"Fellow" -> true', () => {
+            expect(checkIfWordIsFiveOrMoreCharacters("Fellow")).toEqual(true);
+        });
+        it('"Fello" -> true', () => {
+            expect(checkIfWordIsFiveOrMoreCharacters("Fello")).toEqual(true);
+        });
+        it('"" -> false', () => {
+            expect(checkIfWordIsFiveOrMoreCharacters("")).toEqual(false);
+        });
+
         
     });
 });

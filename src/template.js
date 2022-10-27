@@ -2,7 +2,7 @@ function splitMyString(string) {
     return string.split(" ")
 }
 
-function checkIfWordIsLongerThanFiveCharacters(word) {
+function checkIfWordIsFiveOrMoreCharacters(word) {
     if(word.length >= 5) {
         return true;
     }
@@ -11,5 +11,6 @@ function checkIfWordIsLongerThanFiveCharacters(word) {
 
 module.exports = {
     splitMyString, 
-    checkIfWordIsLongerThanFiveCharacters
+    checkIfWordIsFiveOrMoreCharacters
+
 }
