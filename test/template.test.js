@@ -1,6 +1,8 @@
 const {
     splitMyString, 
-    checkIfWordIsFiveOrMoreCharacters 
+    checkIfWordIsFiveOrMoreCharacters,
+    spinMyWord,
+    spinMyWords
 } = require('../src/template');
 
 describe('This is a test suite that tests the spinning words function. All words that contain 5 or more letters will be reversed', () => {
@@ -27,5 +29,18 @@ describe('This is a test suite that tests the spinning words function. All words
         });
 
         
+    });
+
+    describe('Then we revert the letters in the words, longer than or equal to 5 characters ', () => {
+                it('"fellow" -> "wollef"', () => {
+            expect(spinMyWord("fellow")).toEqual("wollef");
+        });
+    });
+
+    describe('Once the words are spinned, we can bring back all the words together', () => {
+        
+        it('"Hey fellow warriors" => "Hey wollef sroirraw"', () => {
+            expect(spinMyWords("Hey fellow warriors")).toEqual("Hey wollef sroirraw")
+        });
     });
 });

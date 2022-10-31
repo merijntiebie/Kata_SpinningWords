@@ -13,8 +13,14 @@ spinWords( "This is another test" )=> returns "This is rehtona test"
 "Hey fellow warriors" -> ["Hey", "fellow", "warriors"]
 " " -> ["", ""]
 - Find out if the word is 5 or more characters long
- "Hey" -> false
- "Fellow" -> true
- "Fello" -> true
- "" -> false
+ ✔ "Hey" -> false
+ ✔ "Fellow" -> true
+ ✔ "Fello" -> true
+ ✔ "" -> false
 
+- Reverse the letters in a word
+✔"fellow" -> "wollef"
+
+End-to-End:
+🎈- "Hey fellow warriors" => "Hey wollef sroirraw"
+- "This is a test" => "This is a test"
