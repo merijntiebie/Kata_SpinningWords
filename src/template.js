@@ -15,7 +15,7 @@ function spinMyWord(word) {
 
 function spinMyWords(sentence) {
     var words = splitMyString(sentence);
-    var newSentenceInArray = []
+                    var newSentenceInArray = []
     for (let index = 0; index < words.length; index++) {
         const word = words[index];
         if (checkIfWordIsFiveOrMoreCharacters(word)) {
