@@ -6,6 +6,9 @@ const {
 } = require('../src/template');
 
 describe('This is a test suite that tests the spinning words function. All words that contain 5 or more letters will be reversed', () => {
+
+    });
+
     describe('In order to reverse those words, we first need to identify the separate words within a phrase', () => {
         it('"Hey fellow warriors" -> ["Hey", "fellow", "warriors"]', () => {
             expect(splitMyString("Hey fellow warriors")).toEqual(["Hey", "fellow", "warriors" ]);
@@ -42,5 +45,8 @@ describe('This is a test suite that tests the spinning words function. All words
         it('"Hey fellow warriors" => "Hey wollef sroirraw"', () => {
             expect(spinMyWords("Hey fellow warriors")).toEqual("Hey wollef sroirraw")
         });
+
+        it('"This a test" => "This a test"', () => {
+            expect(spinMyWords("This a test")).toEqual("This a test")
+        });
     });
-});
